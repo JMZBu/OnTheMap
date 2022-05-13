@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -96,7 +97,9 @@
                         <viewLayoutGuide key="safeArea" id="woF-O4-ZLI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="IJ2-Fm-Va3"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="IJ2-Fm-Va3">
+                        <imageReference key="image" image="map" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWD-Lq-aa8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,7 +146,9 @@
                             <outlet property="delegate" destination="efi-rN-PMJ" id="WF0-xG-QtQ"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="JjS-5X-vca"/>
+                    <tabBarItem key="tabBarItem" title="List" id="JjS-5X-vca">
+                        <imageReference key="image" image="list.bullet" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rj0-kA-zeH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,6 +156,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="map" catalog="system" width="128" height="110"/>
         <image name="udacityLogo" width="379" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

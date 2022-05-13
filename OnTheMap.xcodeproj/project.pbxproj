@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1A1B51EC282EC5680066649B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B51EB282EC5680066649B /* ListViewController.swift */; };
 		1A1B51EE282EC59B0066649B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B51ED282EC59B0066649B /* MapViewController.swift */; };
+		1A1B51F0282EC8A40066649B /* UsersListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B51EF282EC8A40066649B /* UsersListModel.swift */; };
+		1A1B51F2282EC8EC0066649B /* OTMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B51F1282EC8EC0066649B /* OTMClient.swift */; };
+		1A1B51F4282ECA6F0066649B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B51F3282ECA6F0066649B /* UserData.swift */; };
+		1A1B51FB282ECB570066649B /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B51FA282ECB570066649B /* UserList.swift */; };
 		1AA0959B2824389D00940B0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0959A2824389D00940B0E /* AppDelegate.swift */; };
 		1AA0959D2824389D00940B0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0959C2824389D00940B0E /* SceneDelegate.swift */; };
 		1AA0959F2824389D00940B0E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0959E2824389D00940B0E /* LoginViewController.swift */; };
@@ -40,6 +44,10 @@
 /* Begin PBXFileReference section */
 		1A1B51EB282EC5680066649B /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		1A1B51ED282EC59B0066649B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1A1B51EF282EC8A40066649B /* UsersListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListModel.swift; sourceTree = "<group>"; };
+		1A1B51F1282EC8EC0066649B /* OTMClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMClient.swift; sourceTree = "<group>"; };
+		1A1B51F3282ECA6F0066649B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		1A1B51FA282ECB570066649B /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		1AA095972824389D00940B0E /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA0959A2824389D00940B0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AA0959C2824389D00940B0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +111,10 @@
 		1A1B51E9282EC4420066649B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1A1B51F6282ECADE0066649B /* Data */,
+				1A1B51F7282ECAEA0066649B /* OTM Client */,
+				1A1B51F8282ECAF10066649B /* OTM Requests */,
+				1A1B51F9282ECB1F0066649B /* OTM Responses */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,6 +124,38 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1A1B51F6282ECADE0066649B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1A1B51EF282EC8A40066649B /* UsersListModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1A1B51F7282ECAEA0066649B /* OTM Client */ = {
+			isa = PBXGroup;
+			children = (
+				1A1B51F1282EC8EC0066649B /* OTMClient.swift */,
+			);
+			path = "OTM Client";
+			sourceTree = "<group>";
+		};
+		1A1B51F8282ECAF10066649B /* OTM Requests */ = {
+			isa = PBXGroup;
+			children = (
+				1A1B51F3282ECA6F0066649B /* UserData.swift */,
+			);
+			path = "OTM Requests";
+			sourceTree = "<group>";
+		};
+		1A1B51F9282ECB1F0066649B /* OTM Responses */ = {
+			isa = PBXGroup;
+			children = (
+				1A1B51FA282ECB570066649B /* UserList.swift */,
+			);
+			path = "OTM Responses";
 			sourceTree = "<group>";
 		};
 		1AA0958E2824389D00940B0E = {
@@ -297,9 +341,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA0959F2824389D00940B0E /* LoginViewController.swift in Sources */,
+				1A1B51FB282ECB570066649B /* UserList.swift in Sources */,
 				1AA0959B2824389D00940B0E /* AppDelegate.swift in Sources */,
+				1A1B51F4282ECA6F0066649B /* UserData.swift in Sources */,
 				1A1B51EC282EC5680066649B /* ListViewController.swift in Sources */,
 				1A1B51EE282EC59B0066649B /* MapViewController.swift in Sources */,
+				1A1B51F2282EC8EC0066649B /* OTMClient.swift in Sources */,
+				1A1B51F0282EC8A40066649B /* UsersListModel.swift in Sources */,
 				1AA0959D2824389D00940B0E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

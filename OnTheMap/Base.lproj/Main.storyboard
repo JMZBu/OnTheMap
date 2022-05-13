@@ -45,6 +45,10 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginComplete" destination="BYZ-38-t0r" eventType="touchUpInside" id="adj-AG-OQI"/>
+                                            <segue destination="tde-wh-PJ8" kind="presentation" identifier="loginComplete" modalPresentationStyle="fullScreen" id="aMH-0L-HLU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -74,6 +78,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XbY-7W-9O1" secondAttribute="trailing" constant="20" id="zb8-Kf-azN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="Mag-0n-CY6" id="tTy-u7-EMl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

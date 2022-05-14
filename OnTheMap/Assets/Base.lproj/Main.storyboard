@@ -94,16 +94,30 @@
                     <view key="view" contentMode="scaleToFill" id="0SM-WQ-qfI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ypU-Le-I4l">
+                                <rect key="frame" x="20" y="44" width="374" height="769"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="woF-O4-ZLI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ypU-Le-I4l" firstAttribute="leading" secondItem="woF-O4-ZLI" secondAttribute="leading" constant="20" id="Cod-8V-N1f"/>
+                            <constraint firstItem="ypU-Le-I4l" firstAttribute="top" secondItem="woF-O4-ZLI" secondAttribute="top" id="Oui-1D-VdI"/>
+                            <constraint firstItem="woF-O4-ZLI" firstAttribute="trailing" secondItem="ypU-Le-I4l" secondAttribute="trailing" constant="20" id="ZaJ-sV-aMq"/>
+                            <constraint firstItem="ypU-Le-I4l" firstAttribute="bottom" secondItem="woF-O4-ZLI" secondAttribute="bottom" id="x3w-Oo-FTi"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="IJ2-Fm-Va3">
                         <imageReference key="image" image="map" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="mapView" destination="ypU-Le-I4l" id="OOT-il-PMr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWD-Lq-aa8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1854" y="-224"/>
+            <point key="canvasLocation" x="1853.6231884057972" y="-224.33035714285714"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mEj-w9-6tP">

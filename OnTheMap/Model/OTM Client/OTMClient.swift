@@ -13,12 +13,24 @@ class OTMClient {
         let request = URLRequest(url: URL(string: "https://onthemap-api.udacity.com/v1/StudentLocation")!)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
-                completion([], error)
+                DispatchQueue.main.async {
+                    completion([], error)
+                    print("There was an error fetching the data: \(String(describing: error))")
+                }
                 return
             }
             let decoder = JSONDecoder()
-            let userLocationResponse = try! decoder.decode(UserList.self, from: data)
-            completion(userLocationResponse.results, nil)
+            do {
+                let userLocationResponse = try decoder.decode(UserList.self, from: data)
+                DispatchQueue.main.async {
+                    completion(userLocationResponse.results, nil)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    print("There was an error parsing the data: \(error)")
+                    completion([], error)
+                }
+            }
 
         }
         task.resume()

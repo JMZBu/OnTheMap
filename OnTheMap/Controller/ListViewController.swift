@@ -15,10 +15,14 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        OTMClient.getUserDetails { data, error in
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        OTMClient.getUserDetails() { data, error in
             DispatchQueue.main.async {
                 UsersListModel.usersList = data
                 self.tableView.reloadData()
+                print("Here is the usersList: \(UsersListModel.usersList)")
             }
         }
     }

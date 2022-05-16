@@ -12,6 +12,8 @@ class ListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var selectedIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +24,7 @@ class ListViewController: UIViewController {
             DispatchQueue.main.async {
                 UsersListModel.usersList = data
                 self.tableView.reloadData()
-                print("Here is the usersList: \(UsersListModel.usersList)")
+                dump(UsersListModel.usersList)
             }
         }
     }
@@ -54,4 +56,11 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        let user = UsersListModel.usersList[selectedIndex]
+        let app = UIApplication.shared
+        guard let urlToOpen = URL(string: user.mediaURL) else { return }
+        app.open(urlToOpen, options: [:], completionHandler: nil)
+    }
 }

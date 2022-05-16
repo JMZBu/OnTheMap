@@ -50,7 +50,6 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         let user = UsersListModel.usersList[indexPath.row]
         
         cell?.textLabel?.text = "\(user.firstName) \(user.lastName)"
-        cell?.detailTextLabel?.text = "\(user.mediaURL)"
         
         return cell!
     }

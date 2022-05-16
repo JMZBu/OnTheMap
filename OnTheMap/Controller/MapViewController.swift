@@ -12,10 +12,14 @@ import MapKit
 class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var loadingMapLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        mapViewIsLoading(true)
+        
         
         var annotations = [MKPointAnnotation]()
         OTMClient.getUserDetails { StudentList, Error in
@@ -31,6 +35,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 annotation.title = "\(first) \(last)"
                 annotation.subtitle = mediaURL
                 annotations.append(annotation)
+                self.mapViewIsLoading(false)
+                
             }
             self.mapView.addAnnotations(annotations)
         }
@@ -61,6 +67,18 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             if let toOpen = view.annotation?.subtitle! {
                 app.open(URL(string: toOpen)!, options: [:], completionHandler: nil)
             }
+        }
+    }
+    
+    func mapViewIsLoading(_ isLoading: Bool) {
+        if isLoading {
+            activityIndicator.startAnimating()
+            loadingMapLabel.isHidden = false
+            mapView.isHidden = true
+        } else {
+            activityIndicator.stopAnimating()
+            loadingMapLabel.isHidden = true
+            mapView.isHidden = false
         }
     }
     

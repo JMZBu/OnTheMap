@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -98,13 +99,30 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ypU-Le-I4l">
                                 <rect key="frame" x="20" y="44" width="374" height="769"/>
                             </mapView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="yEz-I8-NUP">
+                                <rect key="frame" x="189" y="410" width="37" height="37"/>
+                                <color key="color" name="AccentColor"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGL-fH-Wfy">
+                                <rect key="frame" x="150" y="357" width="116" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="woF-O4-ZLI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="JGL-fH-Wfy" firstAttribute="top" secondItem="woF-O4-ZLI" secondAttribute="top" constant="313" id="1XK-gj-9V5"/>
+                            <constraint firstItem="woF-O4-ZLI" firstAttribute="trailing" secondItem="JGL-fH-Wfy" secondAttribute="trailing" constant="148" id="Bsy-76-cc8"/>
                             <constraint firstItem="ypU-Le-I4l" firstAttribute="leading" secondItem="woF-O4-ZLI" secondAttribute="leading" constant="20" id="Cod-8V-N1f"/>
+                            <constraint firstItem="yEz-I8-NUP" firstAttribute="leading" secondItem="woF-O4-ZLI" secondAttribute="leading" constant="189" id="HwF-h1-d6b"/>
                             <constraint firstItem="ypU-Le-I4l" firstAttribute="top" secondItem="woF-O4-ZLI" secondAttribute="top" id="Oui-1D-VdI"/>
+                            <constraint firstItem="woF-O4-ZLI" firstAttribute="bottom" secondItem="yEz-I8-NUP" secondAttribute="bottom" constant="366" id="Uxn-5W-vRM"/>
+                            <constraint firstItem="woF-O4-ZLI" firstAttribute="trailing" secondItem="yEz-I8-NUP" secondAttribute="trailing" constant="188" id="YTU-Vl-HHh"/>
                             <constraint firstItem="woF-O4-ZLI" firstAttribute="trailing" secondItem="ypU-Le-I4l" secondAttribute="trailing" constant="20" id="ZaJ-sV-aMq"/>
+                            <constraint firstItem="JGL-fH-Wfy" firstAttribute="leading" secondItem="woF-O4-ZLI" secondAttribute="leading" constant="150" id="gr8-lh-gsT"/>
+                            <constraint firstItem="yEz-I8-NUP" firstAttribute="top" secondItem="JGL-fH-Wfy" secondAttribute="bottom" constant="20" id="j3R-Z9-TSw"/>
                             <constraint firstItem="ypU-Le-I4l" firstAttribute="bottom" secondItem="woF-O4-ZLI" secondAttribute="bottom" id="x3w-Oo-FTi"/>
                         </constraints>
                     </view>
@@ -112,6 +130,8 @@
                         <imageReference key="image" image="map" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="yEz-I8-NUP" id="Z6Q-Al-qv1"/>
+                        <outlet property="loadingMapLabel" destination="JGL-fH-Wfy" id="Bto-Vo-L3Q"/>
                         <outlet property="mapView" destination="ypU-Le-I4l" id="OOT-il-PMr"/>
                     </connections>
                 </viewController>
@@ -199,6 +219,9 @@
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="mappin" catalog="system" width="105" height="128"/>
         <image name="udacityLogo" width="379" height="98"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

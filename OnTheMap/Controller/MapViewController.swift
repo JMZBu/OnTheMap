@@ -14,6 +14,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var loadingMapLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var addLocationButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,10 +76,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             activityIndicator.startAnimating()
             loadingMapLabel.isHidden = false
             mapView.isHidden = true
+            addLocationButton.isEnabled = false
         } else {
             activityIndicator.stopAnimating()
             loadingMapLabel.isHidden = true
             mapView.isHidden = false
+            addLocationButton.isEnabled = true
         }
     }
     

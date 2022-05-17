@@ -11,6 +11,9 @@ import UIKit
 class ListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var populatingListLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var addLocationButton: UIBarButtonItem!
     
     var selectedIndex = 0
     
@@ -19,12 +22,15 @@ class ListViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = 75
+        listViewIsLoading(true)
         
         OTMClient.getUserDetails() { data, error in
             DispatchQueue.main.async {
                 UsersListModel.usersList = data
                 self.tableView.reloadData()
                 dump(UsersListModel.usersList)
+                self.listViewIsLoading(false)
             }
         }
     }
@@ -33,6 +39,20 @@ class ListViewController: UIViewController {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
+    }
+    
+    func listViewIsLoading(_ isLoading: Bool) {
+        if isLoading {
+            populatingListLabel.isHidden = false
+            activityIndicator.startAnimating()
+            tableView.isHidden = true
+            addLocationButton.isEnabled = false
+        } else {
+            populatingListLabel.isHidden = true
+            activityIndicator.stopAnimating()
+            tableView.isHidden = false
+            addLocationButton.isEnabled = true
+        }
     }
 }
 

@@ -127,6 +127,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="IJ2-Fm-Va3"/>
                     <navigationItem key="navigationItem" title="On the Map" id="nKo-Qh-lu6">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="iNP-C7-YKo"/>
                         <barButtonItem key="leftBarButtonItem" id="80B-jQ-CWX" userLabel="Add Location">
                             <imageReference key="image" image="person.crop.circle.fill.badge.plus" catalog="system" symbolScale="large"/>
                             <connections>
@@ -265,6 +266,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="List" image="list.bullet" catalog="system" id="edM-an-cAe"/>
                     <navigationItem key="navigationItem" title="On the Map" id="J35-eF-QaH">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="sik-5K-3c9"/>
                         <barButtonItem key="leftBarButtonItem" id="Zmm-M9-3or">
                             <imageReference key="image" image="person.crop.circle.fill.badge.plus" catalog="system" symbolScale="large"/>
                             <connections>
@@ -284,28 +286,85 @@
             </objects>
             <point key="canvasLocation" x="2882.608695652174" y="648.88392857142856"/>
         </scene>
-        <!--Add Location View Controller-->
+        <!--Add Location-->
         <scene sceneID="bwo-Rx-lJy">
             <objects>
                 <viewController id="IVy-yJ-ScL" customClass="AddLocationViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mtp-nt-RS9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="OXR-Sr-jzr">
+                                <rect key="frame" x="20" y="237" width="374" height="259"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="75" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMM-Ms-Pvf" userLabel="Email Text Field">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="75" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GSr-YY-sVn">
+                                        <rect key="frame" x="0.0" y="97" width="374" height="75"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="65" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CM-6g-k4L" userLabel="Login Button">
+                                        <rect key="frame" x="0.0" y="194" width="374" height="65"/>
+                                        <color key="tintColor" red="0.003010978457" green="0.70323187109999996" blue="0.89525973800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" buttonSize="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Find Location">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginComplete" destination="BYZ-38-t0r" eventType="touchUpInside" id="j4h-rB-IXJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="tintColor" red="0.81948262449999998" green="0.95280283690000001" blue="0.99085670709999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ybJ-7Q-qPa">
+                                <rect key="frame" x="20" y="504" width="374" height="309"/>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="FMv-OD-5eO">
+                                <rect key="frame" x="96" y="137" width="223" height="67"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TbJ-dF-1Xy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OXR-Sr-jzr" firstAttribute="leading" secondItem="TbJ-dF-1Xy" secondAttribute="leading" constant="20" id="3WU-sE-DKo"/>
+                            <constraint firstItem="TbJ-dF-1Xy" firstAttribute="trailing" secondItem="OXR-Sr-jzr" secondAttribute="trailing" constant="20" id="3lC-be-cQ1"/>
+                            <constraint firstItem="ybJ-7Q-qPa" firstAttribute="top" secondItem="OXR-Sr-jzr" secondAttribute="bottom" constant="8" symbolic="YES" id="BlH-xB-TQM"/>
+                            <constraint firstItem="TbJ-dF-1Xy" firstAttribute="trailing" secondItem="FMv-OD-5eO" secondAttribute="trailing" constant="95" id="DEK-Ke-2dJ"/>
+                            <constraint firstItem="TbJ-dF-1Xy" firstAttribute="trailing" secondItem="ybJ-7Q-qPa" secondAttribute="trailing" constant="20" id="GZc-et-xaL"/>
+                            <constraint firstItem="ybJ-7Q-qPa" firstAttribute="leading" secondItem="TbJ-dF-1Xy" secondAttribute="leading" constant="20" id="Gnz-Ho-k7A"/>
+                            <constraint firstItem="ybJ-7Q-qPa" firstAttribute="top" secondItem="OXR-Sr-jzr" secondAttribute="bottom" constant="8" symbolic="YES" id="QGC-vY-hOo"/>
+                            <constraint firstItem="FMv-OD-5eO" firstAttribute="top" secondItem="TbJ-dF-1Xy" secondAttribute="top" constant="49" id="Qtr-B6-kgL"/>
+                            <constraint firstItem="OXR-Sr-jzr" firstAttribute="top" secondItem="FMv-OD-5eO" secondAttribute="bottom" constant="33" id="YPT-rW-gd1"/>
+                            <constraint firstItem="ybJ-7Q-qPa" firstAttribute="bottom" secondItem="TbJ-dF-1Xy" secondAttribute="bottom" id="aNm-1l-GEG"/>
+                            <constraint firstItem="FMv-OD-5eO" firstAttribute="leading" secondItem="TbJ-dF-1Xy" secondAttribute="leading" constant="96" id="eQx-5V-6rk"/>
+                            <constraint firstItem="OXR-Sr-jzr" firstAttribute="top" secondItem="FMv-OD-5eO" secondAttribute="bottom" constant="33" id="gSx-db-soy"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lQx-7Z-Zvs"/>
+                    <navigationItem key="navigationItem" title="Add Location" id="lQx-7Z-Zvs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wf3-Sm-byb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4143" y="174"/>
+            <point key="canvasLocation" x="4142.0289855072469" y="173.4375"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UCS-ag-pN9"/>
+        <segue reference="eOG-BH-slZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="locationIcon" width="52" height="67"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="mappin" catalog="system" width="105" height="128"/>
         <image name="person.crop.circle.fill.badge.plus" catalog="system" width="128" height="113"/>

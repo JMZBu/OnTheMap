@@ -26,12 +26,10 @@ class ListViewController: UIViewController {
         listViewIsLoading(true)
         
         OTMClient.getUserDetails() { data, error in
-            DispatchQueue.main.async {
-                UsersListModel.usersList = data
-                self.tableView.reloadData()
-                dump(UsersListModel.usersList)
-                self.listViewIsLoading(false)
-            }
+            UsersListModel.usersList = data
+            self.tableView.reloadData()
+            dump(UsersListModel.usersList)
+            self.listViewIsLoading(false)
         }
     }
     

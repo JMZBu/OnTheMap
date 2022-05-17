@@ -13,6 +13,7 @@
 		1A1B51F2282EC8EC0066649B /* OTMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B51F1282EC8EC0066649B /* OTMClient.swift */; };
 		1A1B51F4282ECA6F0066649B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B51F3282ECA6F0066649B /* UserData.swift */; };
 		1A1B51FB282ECB570066649B /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B51FA282ECB570066649B /* UserList.swift */; };
+		1A8D85B128343E70005E5FBF /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D85B028343E70005E5FBF /* AddLocationViewController.swift */; };
 		1AA0959B2824389D00940B0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0959A2824389D00940B0E /* AppDelegate.swift */; };
 		1AA0959D2824389D00940B0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0959C2824389D00940B0E /* SceneDelegate.swift */; };
 		1AA0959F2824389D00940B0E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0959E2824389D00940B0E /* LoginViewController.swift */; };
@@ -48,6 +49,7 @@
 		1A1B51F1282EC8EC0066649B /* OTMClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMClient.swift; sourceTree = "<group>"; };
 		1A1B51F3282ECA6F0066649B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		1A1B51FA282ECB570066649B /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
+		1A8D85B028343E70005E5FBF /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		1AA095972824389D00940B0E /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA0959A2824389D00940B0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AA0959C2824389D00940B0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				1AA0959E2824389D00940B0E /* LoginViewController.swift */,
 				1A1B51EB282EC5680066649B /* ListViewController.swift */,
 				1A1B51ED282EC59B0066649B /* MapViewController.swift */,
+				1A8D85B028343E70005E5FBF /* AddLocationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				1A1B51EC282EC5680066649B /* ListViewController.swift in Sources */,
 				1A1B51EE282EC59B0066649B /* MapViewController.swift in Sources */,
 				1A1B51F2282EC8EC0066649B /* OTMClient.swift in Sources */,
+				1A8D85B128343E70005E5FBF /* AddLocationViewController.swift in Sources */,
 				1A1B51F0282EC8A40066649B /* UsersListModel.swift in Sources */,
 				1AA0959D2824389D00940B0E /* SceneDelegate.swift in Sources */,
 			);

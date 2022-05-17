@@ -129,6 +129,9 @@
                     <navigationItem key="navigationItem" title="On the Map" id="nKo-Qh-lu6">
                         <barButtonItem key="leftBarButtonItem" id="80B-jQ-CWX" userLabel="Add Location">
                             <imageReference key="image" image="person.crop.circle.fill.badge.plus" catalog="system" symbolScale="large"/>
+                            <connections>
+                                <segue destination="IVy-yJ-ScL" kind="show" identifier="addLocationFromMap" id="UCS-ag-pN9"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="Bv9-wA-fcb"/>
                     </navigationItem>
@@ -264,6 +267,9 @@
                     <navigationItem key="navigationItem" title="On the Map" id="J35-eF-QaH">
                         <barButtonItem key="leftBarButtonItem" id="Zmm-M9-3or">
                             <imageReference key="image" image="person.crop.circle.fill.badge.plus" catalog="system" symbolScale="large"/>
+                            <connections>
+                                <segue destination="IVy-yJ-ScL" kind="show" identifier="addLocationFromList" id="eOG-BH-slZ"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="B00-Eg-M3d"/>
                     </navigationItem>
@@ -278,7 +284,26 @@
             </objects>
             <point key="canvasLocation" x="2882.608695652174" y="648.88392857142856"/>
         </scene>
+        <!--Add Location View Controller-->
+        <scene sceneID="bwo-Rx-lJy">
+            <objects>
+                <viewController id="IVy-yJ-ScL" customClass="AddLocationViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mtp-nt-RS9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TbJ-dF-1Xy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lQx-7Z-Zvs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wf3-Sm-byb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4143" y="174"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UCS-ag-pN9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="map" catalog="system" width="128" height="110"/>

@@ -10,6 +10,11 @@ import MapKit
 
 class AddLocationViewController: UIViewController, MKMapViewDelegate {
     
+    @IBOutlet weak var enterLocationTextField: UITextField!
+    @IBOutlet weak var enterURLTextField: UITextField!
+    @IBOutlet weak var customizedButton: UIButton!
+    @IBOutlet weak var mapView: MKMapView!
+    
     
     
 }

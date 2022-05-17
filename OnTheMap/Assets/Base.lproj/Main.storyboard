@@ -313,8 +313,9 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" buttonSize="large">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Find Location">
+                                                <fragment content="Find/Add Location">
                                                     <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <font key="NSFont" size="20" name="Helvetica"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
@@ -353,6 +354,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Location" id="lQx-7Z-Zvs"/>
+                    <connections>
+                        <outlet property="customButton" destination="6CM-6g-k4L" id="erw-QI-Oxx"/>
+                        <outlet property="enterLocationTextField" destination="YMM-Ms-Pvf" id="PE0-PO-hBr"/>
+                        <outlet property="enterURLTextField" destination="GSr-YY-sVn" id="IW4-mV-cF8"/>
+                        <outlet property="mapView" destination="ybJ-7Q-qPa" id="0jc-0P-P9g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wf3-Sm-byb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

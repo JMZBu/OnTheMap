@@ -54,8 +54,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2Y-pF-tIt">
-                                <rect key="frame" x="117" y="251" width="179" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2Y-pF-tIt">
+                                <rect key="frame" x="121" y="251" width="172.5" height="35"/>
                                 <attributedString key="attributedText">
                                     <fragment content="On The Map">
                                         <attributes>
@@ -134,6 +134,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="yEz-I8-NUP" id="Z6Q-Al-qv1"/>
+                        <outlet property="addLocationButton" destination="80B-jQ-CWX" id="bWJ-xl-ZoG"/>
                         <outlet property="loadingMapLabel" destination="JGL-fH-Wfy" id="Bto-Vo-L3Q"/>
                         <outlet property="mapView" destination="ypU-Le-I4l" id="OOT-il-PMr"/>
                     </connections>
@@ -203,25 +204,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="m1y-bb-wo5">
-                                <rect key="frame" x="20" y="88" width="374" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listTableViewCell" textLabel="CSY-oN-1UJ" imageView="Cjq-bD-htl" rowHeight="57" style="IBUITableViewCellStyleDefault" id="Kfl-xG-Di5">
-                                        <rect key="frame" x="0.0" y="44.5" width="374" height="57"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listTableViewCell" textLabel="CSY-oN-1UJ" imageView="Cjq-bD-htl" rowHeight="75" style="IBUITableViewCellStyleDefault" id="Kfl-xG-Di5">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kfl-xG-Di5" id="7Iq-p1-8pw">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="57"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CSY-oN-1UJ">
-                                                    <rect key="frame" x="55.5" y="0.0" width="298.5" height="57"/>
+                                                    <rect key="frame" x="55.5" y="0.0" width="338.5" height="75"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cjq-bD-htl">
-                                                    <rect key="frame" x="20.25" y="15" width="20" height="26.5"/>
+                                                    <rect key="frame" x="20.25" y="24" width="20" height="26.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <imageReference key="image" image="mappin" catalog="system" symbolScale="large"/>
                                                 </imageView>
@@ -231,37 +232,57 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Populating List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ez-mX-eh0">
+                                <rect key="frame" x="140" y="168" width="135" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ebu-3w-7ys">
+                                <rect key="frame" x="189" y="199" width="37" height="37"/>
+                                <color key="color" name="AccentColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O4w-Om-KYb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="m1y-bb-wo5" firstAttribute="leading" secondItem="O4w-Om-KYb" secondAttribute="leading" constant="20" id="JAm-p5-uA6"/>
-                            <constraint firstItem="O4w-Om-KYb" firstAttribute="trailing" secondItem="m1y-bb-wo5" secondAttribute="trailing" constant="20" id="ceN-Bh-FRb"/>
+                            <constraint firstItem="ebu-3w-7ys" firstAttribute="leading" secondItem="O4w-Om-KYb" secondAttribute="leading" constant="189" id="5V4-vh-g54"/>
+                            <constraint firstItem="m1y-bb-wo5" firstAttribute="leading" secondItem="O4w-Om-KYb" secondAttribute="leading" id="5fR-ma-yAl"/>
+                            <constraint firstItem="ebu-3w-7ys" firstAttribute="top" secondItem="1Ez-mX-eh0" secondAttribute="bottom" constant="8" symbolic="YES" id="6Fw-NW-hvh"/>
+                            <constraint firstItem="1Ez-mX-eh0" firstAttribute="top" secondItem="O4w-Om-KYb" secondAttribute="top" constant="80" id="CUW-9J-IPd"/>
+                            <constraint firstItem="O4w-Om-KYb" firstAttribute="trailing" secondItem="1Ez-mX-eh0" secondAttribute="trailing" constant="139" id="V62-fb-xPU"/>
+                            <constraint firstItem="1Ez-mX-eh0" firstAttribute="leading" secondItem="O4w-Om-KYb" secondAttribute="leading" constant="140" id="fVt-s5-2Ib"/>
+                            <constraint firstItem="m1y-bb-wo5" firstAttribute="trailing" secondItem="O4w-Om-KYb" secondAttribute="trailing" id="k39-XY-mJt"/>
+                            <constraint firstItem="O4w-Om-KYb" firstAttribute="bottom" secondItem="ebu-3w-7ys" secondAttribute="bottom" constant="577" id="lTB-qe-xJ6"/>
+                            <constraint firstItem="ebu-3w-7ys" firstAttribute="top" secondItem="1Ez-mX-eh0" secondAttribute="bottom" constant="8" symbolic="YES" id="lo6-jH-lma"/>
                             <constraint firstItem="m1y-bb-wo5" firstAttribute="bottom" secondItem="O4w-Om-KYb" secondAttribute="bottom" id="pVd-hh-xLB"/>
+                            <constraint firstItem="O4w-Om-KYb" firstAttribute="trailing" secondItem="ebu-3w-7ys" secondAttribute="trailing" constant="188" id="tCR-Qv-BB0"/>
                             <constraint firstItem="m1y-bb-wo5" firstAttribute="top" secondItem="O4w-Om-KYb" secondAttribute="top" id="xDf-9b-O4y"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="List" image="list.bullet" catalog="system" id="edM-an-cAe"/>
                     <navigationItem key="navigationItem" title="On the Map" id="J35-eF-QaH">
                         <barButtonItem key="leftBarButtonItem" id="Zmm-M9-3or">
-                            <imageReference key="image" image="person.crop.circle.badge.plus.fill" catalog="system" symbolScale="large"/>
+                            <imageReference key="image" image="person.crop.circle.fill.badge.plus" catalog="system" symbolScale="large"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="B00-Eg-M3d"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="ebu-3w-7ys" id="Hj9-AY-HWz"/>
+                        <outlet property="addLocationButton" destination="Zmm-M9-3or" id="pEh-ql-trh"/>
+                        <outlet property="populatingListLabel" destination="1Ez-mX-eh0" id="m6I-Dw-VlJ"/>
                         <outlet property="tableView" destination="m1y-bb-wo5" id="3d0-pD-fgZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2d3-iV-l67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2884" y="649"/>
+            <point key="canvasLocation" x="2882.608695652174" y="648.88392857142856"/>
         </scene>
     </scenes>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="mappin" catalog="system" width="105" height="128"/>
-        <image name="person.crop.circle.badge.plus.fill" catalog="system" width="128" height="113"/>
         <image name="person.crop.circle.fill.badge.plus" catalog="system" width="128" height="113"/>
         <image name="udacityLogo" width="379" height="98"/>
         <namedColor name="AccentColor">

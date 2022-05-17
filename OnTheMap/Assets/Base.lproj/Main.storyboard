@@ -126,7 +126,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="IJ2-Fm-Va3"/>
-                    <navigationItem key="navigationItem" title="On the Map" id="nKo-Qh-lu6"/>
+                    <navigationItem key="navigationItem" title="On the Map" id="nKo-Qh-lu6">
+                        <barButtonItem key="leftBarButtonItem" id="80B-jQ-CWX" userLabel="Add Location">
+                            <imageReference key="image" image="person.crop.circle.fill.badge.plus" catalog="system" symbolScale="large"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="Bv9-wA-fcb"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="yEz-I8-NUP" id="Z6Q-Al-qv1"/>
                         <outlet property="loadingMapLabel" destination="JGL-fH-Wfy" id="Bto-Vo-L3Q"/>
@@ -147,8 +152,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="kJe-yD-NpY" kind="relationship" relationship="viewControllers" id="rSB-Uf-bZk"/>
-                        <segue destination="8pp-dz-Yi8" kind="relationship" relationship="viewControllers" id="kmH-pd-TFB"/>
+                        <segue destination="8pp-dz-Yi8" kind="relationship" relationship="viewControllers" id="3AR-fm-aFe"/>
+                        <segue destination="kJe-yD-NpY" kind="relationship" relationship="viewControllers" id="TLj-aB-0qM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIb-PI-gmu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -237,7 +242,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="List" image="list.bullet" catalog="system" id="edM-an-cAe"/>
-                    <navigationItem key="navigationItem" title="On the Map" id="J35-eF-QaH"/>
+                    <navigationItem key="navigationItem" title="On the Map" id="J35-eF-QaH">
+                        <barButtonItem key="leftBarButtonItem" id="Zmm-M9-3or">
+                            <imageReference key="image" image="person.crop.circle.badge.plus.fill" catalog="system" symbolScale="large"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="B00-Eg-M3d"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="m1y-bb-wo5" id="3d0-pD-fgZ"/>
                     </connections>
@@ -251,6 +261,8 @@
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="mappin" catalog="system" width="105" height="128"/>
+        <image name="person.crop.circle.badge.plus.fill" catalog="system" width="128" height="113"/>
+        <image name="person.crop.circle.fill.badge.plus" catalog="system" width="128" height="113"/>
         <image name="udacityLogo" width="379" height="98"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

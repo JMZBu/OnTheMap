@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserData: Codable {
+class StudentLocationData: Codable {
     let createdAt: String
     let firstName: String
     let lastName: String

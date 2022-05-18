@@ -7,6 +7,6 @@
 
 import Foundation
 
-class UsersListModel {
-    static var usersList = [UserData]()
+class StudentsLocationsListModel {
+    static var studentsLocationsList = [StudentLocationData]()
 }

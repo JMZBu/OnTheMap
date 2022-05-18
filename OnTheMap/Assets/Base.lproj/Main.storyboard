@@ -67,7 +67,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="IS5-tB-j30">
-                                <rect key="frame" x="197" y="621" width="20" height="20"/>
+                                <rect key="frame" x="197" y="604" width="20" height="37"/>
                                 <color key="color" red="0.1238903826" green="0.095112589629999994" blue="0.94244543290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -79,7 +79,6 @@
                             <constraint firstItem="IS5-tB-j30" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="197" id="Frf-Kl-Uf8"/>
                             <constraint firstItem="XbY-7W-9O1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="JRj-dl-Sht"/>
                             <constraint firstItem="XbY-7W-9O1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PK4-dh-WuR"/>
-                            <constraint firstItem="IS5-tB-j30" firstAttribute="top" secondItem="XbY-7W-9O1" secondAttribute="bottom" constant="38.5" id="SjD-3h-8ZV"/>
                             <constraint firstItem="aWH-RT-Egh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="36" id="W88-Fi-Dx2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IS5-tB-j30" secondAttribute="bottom" constant="221" id="a7h-hU-mID"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aWH-RT-Egh" secondAttribute="trailing" constant="36" id="cb4-Nx-aEv"/>

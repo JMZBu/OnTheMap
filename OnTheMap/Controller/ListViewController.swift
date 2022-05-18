@@ -25,10 +25,10 @@ class ListViewController: UIViewController {
         tableView.rowHeight = 75
         listViewIsLoading(true)
         
-        OTMClient.getUserDetails() { data, error in
-            UsersListModel.usersList = data
+        OTMClient.getStudentLocations { data, error in
+            StudentsLocationsListModel.studentsLocationsList = data
             self.tableView.reloadData()
-            dump(UsersListModel.usersList)
+            dump(StudentsLocationsListModel.studentsLocationsList)
             self.listViewIsLoading(false)
         }
     }
@@ -61,13 +61,13 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return UsersListModel.usersList.count
+        return StudentsLocationsListModel.studentsLocationsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listTableViewCell")
         
-        let user = UsersListModel.usersList[indexPath.row]
+        let user = StudentsLocationsListModel.studentsLocationsList[indexPath.row]
         
         cell?.textLabel?.text = "\(user.firstName) \(user.lastName)"
         
@@ -76,7 +76,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
-        let user = UsersListModel.usersList[selectedIndex]
+        let user = StudentsLocationsListModel.studentsLocationsList[selectedIndex]
         let app = UIApplication.shared
         guard let urlToOpen = URL(string: user.mediaURL) else { return }
         app.open(urlToOpen, options: [:], completionHandler: nil)

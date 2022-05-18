@@ -23,7 +23,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         
         var annotations = [MKPointAnnotation]()
-        OTMClient.getUserDetails { StudentList, Error in
+        OTMClient.getStudentLocations { StudentList, Error in
             for dictionary in StudentList {
                 let lat = CLLocationDegrees(dictionary.latitude)
                 let long = CLLocationDegrees(dictionary.longitude)

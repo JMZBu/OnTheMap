@@ -7,6 +7,6 @@
 
 import Foundation
 
-class UserList: Codable {
-    let results: [UserData]
+class StudentLocationsList: Codable {
+    let results: [StudentLocationData]
 }

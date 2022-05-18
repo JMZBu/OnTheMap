@@ -9,13 +9,20 @@ import Foundation
 
 class OTMClient {
 
+    struct Auth {
+        static var sessionId = ""
+        static var accountKey = ""
+    }
+    
     enum Endpoints {
         
-        case getUserDetails
+        static let base = "https://onthemap-api.udacity.com/v1"
+        
+        case getStudentLocations
         
         var stringValue: String {
             switch self {
-            case .getUserDetails: return "https://onthemap-api.udacity.com/v1/StudentLocation"
+            case .getStudentLocations: return Endpoints.base + "/StudentLocation"
             }
         }
         
@@ -51,8 +58,8 @@ class OTMClient {
         task.resume()
     }
     
-    class func getUserDetails(completion: @escaping ([UserData], Error?) -> Void) {
-        taskForGETRequest(url: Endpoints.getUserDetails.url, response: UserList.self) { response, error in
+    class func getStudentLocations(completion: @escaping ([StudentLocationData], Error?) -> Void) {
+        taskForGETRequest(url: Endpoints.getStudentLocations.url, response: StudentLocationsList.self) { response, error in
             if let response = response {
                 completion(response.results, nil)
             } else {

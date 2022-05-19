@@ -13,6 +13,7 @@
 		1A1B51F2282EC8EC0066649B /* OTMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B51F1282EC8EC0066649B /* OTMClient.swift */; };
 		1A1B51F4282ECA6F0066649B /* StudentLocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B51F3282ECA6F0066649B /* StudentLocationData.swift */; };
 		1A1B51FB282ECB570066649B /* StudentLocationsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B51FA282ECB570066649B /* StudentLocationsList.swift */; };
+		1A67AAD62835D1F40033F27B /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A67AAD52835D1F40033F27B /* LoginResponse.swift */; };
 		1A8D85B128343E70005E5FBF /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D85B028343E70005E5FBF /* AddLocationViewController.swift */; };
 		1AA0959B2824389D00940B0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0959A2824389D00940B0E /* AppDelegate.swift */; };
 		1AA0959D2824389D00940B0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0959C2824389D00940B0E /* SceneDelegate.swift */; };
@@ -49,6 +50,7 @@
 		1A1B51F1282EC8EC0066649B /* OTMClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMClient.swift; sourceTree = "<group>"; };
 		1A1B51F3282ECA6F0066649B /* StudentLocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationData.swift; sourceTree = "<group>"; };
 		1A1B51FA282ECB570066649B /* StudentLocationsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationsList.swift; sourceTree = "<group>"; };
+		1A67AAD52835D1F40033F27B /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		1A8D85B028343E70005E5FBF /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		1AA095972824389D00940B0E /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA0959A2824389D00940B0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				1A1B51FA282ECB570066649B /* StudentLocationsList.swift */,
+				1A67AAD52835D1F40033F27B /* LoginResponse.swift */,
 			);
 			path = "OTM Responses";
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				1A1B51F2282EC8EC0066649B /* OTMClient.swift in Sources */,
 				1A8D85B128343E70005E5FBF /* AddLocationViewController.swift in Sources */,
 				1A1B51F0282EC8A40066649B /* StudentsLocationsListModel.swift in Sources */,
+				1A67AAD62835D1F40033F27B /* LoginResponse.swift in Sources */,
 				1AA0959D2824389D00940B0E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

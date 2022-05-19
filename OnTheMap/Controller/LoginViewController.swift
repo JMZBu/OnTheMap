@@ -21,8 +21,23 @@ class LoginViewController: UIViewController {
         passwordTextField.text = nil
     }
     
-    @IBAction func loginComplete() {
-        performSegue(withIdentifier: "loginComplete", sender: nil)
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        setLoggingIn(true)
+        OTMClient.login(username: emailTextField.text ?? "", password: passwordTextField.text ?? "") { success, error in
+            if success {
+                self.performSegue(withIdentifier: "loginComplete", sender: nil)
+                self.setLoggingIn(false)
+            } else {
+                self.showLoginFailure(message: error?.localizedDescription ?? "Something went wrong.")
+                self.setLoggingIn(false)
+                return
+            }
+        }
+    }
+    
+    func showLoginFailure(message: String) {
+        let alertVC = UIAlertController(title: "Login Failed", message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
     }
     
     func setLoggingIn(_ loggingIn: Bool) {

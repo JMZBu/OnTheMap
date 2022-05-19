@@ -48,7 +48,7 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="loginComplete" destination="BYZ-38-t0r" eventType="touchUpInside" id="adj-AG-OQI"/>
+                                            <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yjj-UB-mak"/>
                                             <segue destination="tde-wh-PJ8" kind="presentation" identifier="loginComplete" modalPresentationStyle="fullScreen" id="aMH-0L-HLU"/>
                                         </connections>
                                     </button>

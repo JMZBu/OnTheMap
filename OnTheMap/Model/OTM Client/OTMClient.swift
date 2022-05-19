@@ -153,7 +153,9 @@ class OTMClient {
                     completion(true, nil)
                 }
             } catch {
-                completion(false, error)
+                DispatchQueue.main.async {
+                    completion(false, error)
+                }
             }
         }
         task.resume()
